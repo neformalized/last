@@ -1,0 +1,518 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Exo2;
+}
+
+.clear{
+	clear: both;
+}
+
+/**/
+
+#wrap{
+	width: 1200px;
+	margin: 44px auto;
+}
+
+/**/
+
+#dash{
+	display: inline-block;
+	width: 200px;
+	float: left;
+	
+	background-color: transparent;
+}
+
+#dash a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	
+	font-size: 17px;
+	font-weight: 400;
+	
+	margin-right: 12px;
+	padding-right: 37px;
+	
+	color: rgb(30, 30, 30);
+	text-decoration: none;
+	text-align: right;
+	
+	background-position: 93% 6px;
+	background-size: 18px 18px;
+	background-repeat: no-repeat;
+}
+
+#dash a:hover{
+	background-color: rgb(200, 200, 200);
+	color: rgb(40, 40, 40);
+	
+	border-radius: 0 9px 9px 0;
+}
+
+#dash a.system{
+	background-image: url("img/system.png");
+}
+
+#dash a.api{
+	background-image: url("img/api.png");
+}
+
+#dash a.schedule{
+	background-image: url("img/schedule.png");
+}
+
+#dash a.parser{
+	background-image: url("img/parser.png");
+}
+
+#dash a.data{
+	background-image: url("img/data.png");
+}
+
+#dash a.proxy{
+	background-image: url("img/proxy.png");
+}
+
+#dash a.log{
+	background-image: url("img/log.png");
+}
+
+#dash a.setting{
+	background-image: url("img/setting.png");
+}
+
+/**/
+
+#frame{
+	display: inline-block;
+	width: 1000px;
+	float: left;
+	
+	background-color: rgba(240, 240, 240, 1);
+	box-shadow: 0 0 4px rgba(140, 140, 140, 1);
+	
+	border-radius: 5px;
+}
+
+/**/
+
+#frame #bread{
+	height: 30px;
+	line-height: 30px;
+	
+	background-color: rgba(200, 200, 200, 1);
+	
+	border-radius: 5px 5px 0 0;
+}
+
+#frame #bread a{
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#frame #bread a:before{
+	content: "\00BB";
+	padding-right: 3px;
+}
+
+/**/
+
+#frame #display{
+	padding: 5px 10px;
+}
+
+#frame .success{
+	display: block;
+	margin: 10px;
+	border-left: 3px solid rgba(50, 205, 50, 1);
+	background-color: rgba(50, 205, 50, 0.25);
+	color: black;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#frame .error{
+	display: block;
+	margin: 10px;
+	border-left: 3px solid rgba(220, 20, 60, 1);
+	background-color: rgba(220, 20, 60, 0.25);
+	color: black;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#frame .attention{
+	display: block;
+	margin: 10px;
+	border-left: 3px solid rgba(255, 127, 80, 1);
+	background-color: rgba(255, 127, 80, 0.25);
+	color: black;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#frame .warning{
+	display: block;
+	margin: 10px;
+	border-left: 3px solid rgba(255, 165, 0, 1);
+	background-color: rgba(255, 165, 0, 0.25);
+	color: black;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#frame .empty{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin: 100px 0 120px;
+	color: rgb(30, 30, 30);
+	font-size: 30px;
+	text-align: center;
+}
+
+/**/
+
+#frame #display .srow{
+	height: 29px;
+	background-color: rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+#frame #display .srow:last-child{
+	border-radius: 0 0 4px 4px;
+}
+
+#frame #display .srow div{
+	display: inline-block;
+	height: 29px;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+#frame #display .hrow{
+	height: 20px;
+	background-color: rgb(65, 65, 65);
+	border-radius: 4px 4px 0 0;
+}
+
+#frame #display .hrow div{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+#frame #display .srow div a, #frame #display .hrow div a{
+	padding: 0 5px;
+}
+
+#frame #display .srow div:nth-child(even){
+	background-color: rgb(229, 229, 229);
+	border-bottom: none;
+}
+
+#frame #display .hrow div:nth-child(even){
+	background-color: rgb(89, 89, 89);
+}
+
+/**/
+
+.parser .srow .name{ width: 180px; font-size: 13px; }
+.parser .srow .type{ width: 80px; font-size: 13px; color: rgb(0, 0, 0); text-align: center; font-weight: 800; }
+.parser .srow .link{ width: 350px; font-size: 13px; color: rgb(130, 130, 130); }
+.parser .srow .active{ width: 80px; text-align: center; font-size: 13px; font-weight: bold; }
+.parser .srow .action{ width: 275px; }
+.parser .srow .action a{ font-size: 13px; text-decoration: none; }
+
+.parser .hrow .name{ width: 180px; font-size: 12px; color: white; }
+.parser .hrow .type{ width: 80px; font-size: 12px; color: white; text-align: center; }
+.parser .hrow .link{ width: 350px; font-size: 12px; color: white; }
+.parser .hrow .active{ width: 80px; font-size: 12px; text-align: center; color: white; }
+.parser .hrow .action{ width: 275px; }
+
+/**/
+
+.proxy .srow .name{ width: 170px; font-size: 13px; }
+.proxy .srow .ip{ width: 130px; font-size: 13px; color: rgb(0, 0, 0); }
+.proxy .srow .port{ width: 40px; font-size: 13px; color: rgb(0, 0, 0); }
+.proxy .srow .type{ width: 70px; font-size: 13px; font-weight: bold; text-align: center; }
+.proxy .srow .last{ width: 145px; text-align: center; font-size: 13px; }
+.proxy .srow .active{ width: 60px; text-align: center; font-size: 13px; font-weight: bold; }
+.proxy .srow .action{ width: 340px; }
+.proxy .srow .action a{ font-size: 13px; text-decoration: none; }
+
+.proxy .hrow .name{ width: 170px; font-size: 12px; color: white; }
+.proxy .hrow .ip{ width: 130px; font-size: 12px; color: white; }
+.proxy .hrow .port{ width: 40px; font-size: 12px; color: white; }
+.proxy .hrow .type{ width: 70px; font-size: 12px; color: white; text-align: center; }
+.proxy .hrow .last{ width: 145px; font-size: 12px; color: white; text-align: center; }
+.proxy .hrow .active{ width: 60px; font-size: 12px; color: white; text-align: center; }
+.proxy .hrow .action{ width: 340px; }
+
+/**/
+
+.schedule .srow .name{ width: 100px; font-size: 13px; }
+.schedule .srow .parser{ width: 100px; font-size: 13px; color: rgb(0, 0, 0); }
+.schedule .srow .trigger{ width: 100px; font-size: 13px; color: rgb(0, 0, 0); }
+.schedule .srow .proxy{ width: 70px; font-size: 13px; font-weight: bold; text-align: center; }
+.schedule .srow .cr{ width: 40px; text-align: center; font-size: 9px; font-weight: bold; }
+.schedule .srow .active{ width: 100px; font-size: 13px; font-weight: bold; }
+.schedule .srow .action{ width: 250px; }
+.schedule .srow .action a{ font-size: 13px; text-decoration: none; }
+
+.schedule .hrow .name{ width: 100px; font-size: 12px; color: white; }
+.schedule .hrow .parser{ width: 100px; font-size: 12px; color: white; }
+.schedule .hrow .trigger{ width: 100px; font-size: 12px; color: white; }
+.schedule .hrow .proxy{ width: 70px; font-size: 12px; color: white; text-align: center; }
+.schedule .hrow .cr{ width: 40px; font-size: 10px; color: white; text-align: center; }
+.schedule .hrow .active{ width: 100px; font-size: 12px; color: white; }
+.schedule .hrow .action{ width: 250px; }
+
+/**/
+
+.api .srow .name{ width: 100px; font-size: 13px; }
+.api .srow .service{ width: 100px; font-size: 13px; color: rgb(0, 0, 0); }
+.api .srow .limit{ width: 100px; font-size: 13px; color: rgb(0, 0, 0); }
+.api .srow .active{ width: 100px; font-size: 13px; font-weight: bold; text-align: center; }
+.api .srow .action{ width: 250px; }
+.api .srow .action a{ font-size: 13px; text-decoration: none; }
+
+.api .hrow .name{ width: 100px; font-size: 12px; color: white; }
+.api .hrow .service{ width: 100px; font-size: 12px; color: white; }
+.api .hrow .limit{ width: 100px; font-size: 12px; color: white; }
+.api .hrow .active{ width: 100px; font-size: 12px; color: white; text-align: center; }
+.api .hrow .action{ width: 250px; }
+
+/**/
+
+.data .srow .login{ width: 120px; font-size: 13px; }
+.data .srow .gender{ width: 80px; font-size: 13px; color: rgb(0, 0, 0); }
+.data .srow .service{ width: 80px; font-size: 13px; color: rgb(0, 0, 0); }
+.data .srow .top{ width: 30px; font-size: 13px; color: rgb(0, 0, 0); text-align: center; }
+.data .srow .date{ width: 150px; font-size: 12px; color: rgb(0, 0, 0); text-align: center; }
+.data .srow .active{ width: 80px; font-size: 13px; font-weight: bold; text-align: center; }
+.data .srow .action{ width: 250px; }
+.data .srow .action a{ font-size: 13px; text-decoration: none; }
+
+.data .hrow .login{ width: 120px; font-size: 12px; color: white; }
+.data .hrow .gender{ width: 80px; font-size: 12px; color: white; }
+.data .hrow .service{ width: 80px; font-size: 12px; color: white; }
+.data .hrow .top{ width: 30px; font-size: 12px; color: white; text-align: center; }
+.data .hrow .date{ width: 150px; font-size: 12px; color: white; text-align: center; }
+.data .hrow .active{ width: 80px; font-size: 12px; color: white; text-align: center; }
+.data .hrow .action{ width: 250px; }
+
+/**/
+
+.form .main{
+	
+}
+
+.form hr.gr{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #333, #ccc);
+}
+
+.form hr.sm{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+.form a, .form input, .form select, .form b{
+	display: block;
+}
+
+.form b{
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.form a{
+	font-size: 15px;
+	line-height: 15px;
+	margin: 0 0 3px 0;
+}
+
+/**/
+
+.form .rgb{
+	width: 173px;
+	padding: 10px 5px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: rgb(200, 200, 200);
+}
+
+.form .rgb div{
+	display: inline-block;
+	width: 55px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.form .rgb div input, .form .rgb div a{
+	display: inline;
+	padding: 0 2px;
+	font-size: 13px;
+}
+
+.form .rgb div input{
+	width: 30px;
+	height: 15px;
+}
+
+/**/
+
+.form .part{
+	display: inline-block;
+	float: left;
+	width: 25%;
+}
+
+.form .black div{
+	background-color: rgb(111, 111, 111);
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+
+.form .black a{
+	color: white;
+	font-size: 12px;
+}
+
+.form .black input{
+	width: 50px;
+	border-radius: 5px;
+	border: 1px solid rgb(141, 141, 141);
+}
+
+/**/
+
+.form .main input, .form .main select, .form .part input, .form .part select{
+	margin-bottom: 7px;
+}
+
+.form select.width{
+	width: 180px;
+	overflow: hidden;
+}
+
+.form select[multiple]{
+	width: 150px;
+}
+
+/**/
+
+.form .part .param{
+	background-color: rgb(111, 111, 111);
+	border-radius: 5px;
+	width: 150px;
+	padding: 2px 5px;
+	margin: 0 0 5px 0;
+}
+
+.form .part .param a{
+	color: white;
+	font-size: 12px;
+}
+
+.form .part .param input{
+	display: inline-block;
+	width: 60px;
+	margin-bottom: 2px;
+	border-radius: 5px;
+	border: 1px solid rgb(141, 141, 141);
+}
+
+/**/
+
+.form .field{
+	margin: 10px 0;
+}
+
+.form .field div{
+	width: 300px;
+	background-color: rgb(250, 250, 250);
+	padding: 5px;
+	margin-bottom: 6px;
+	border-radius: 5px;
+}
+
+.form .field div font{
+	float: right;
+	padding: 3px 10px;
+	font-size: 13px;
+	background-color: rgb(230, 230, 230);
+	color: rgb(60, 60, 60);
+	border-radius: 10px;
+	font-weight: 800;
+}
+
+.form .field div.rate{
+	background-color: rgba(255, 255, 0, 0.34);
+}
+
+.form .field div.img{
+	background-color: rgba(153, 50, 204, 0.34);
+}
+
+.form .field div:last-child{
+	margin-bottom: 0;
+}
+
+.form .field div a{
+	font-size: 14px;
+	margin: 3px 0 2px 0;
+}
+
+.form .field div i{
+	margin: 3px 0 2px 0;
+	font-size: 13px;
+}
+
+.form .field div input[type="checkbox"]{
+	display: inline;
+}
+
+/**/
+
+.form #add{
+	display: block;
+	width: 80px;
+	height: 23px;
+	padding-top: 6px;
+	line-height: 20px;
+	border-radius: 5px;
+	background-color: rgb(46, 139, 87);
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin: 7px 0;
+	cursor: pointer;
+}
+
+.form #add:hover{
+	box-shadow: 0 0 10px rgb(46, 139, 87);
+}
+
+.form .param font{
+	color: red;
+	font-size: 12px;
+}
+
+.form .param font:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
